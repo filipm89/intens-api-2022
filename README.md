@@ -1,4 +1,4 @@
-# Intens Api DevOps
+# Intens Api DevOps 
 Uputstvo za izradu.
 
 ## Koraci
