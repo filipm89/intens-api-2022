@@ -1,0 +1,16 @@
+name: Tests
+
+on [pull_request]:
+  branches:
+    - main
+
+jobs:
+  run:
+    runs-on: ['ubuntu-latest', 'windows-latest']
+    strategy:
+    matrix:
+      php-versions: ['7.3', '7.4', '8.0', '8.1', '8.2']
+    name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.os }}
+    steps:
+      name: Run Test Suite
+      run: vendor/bin/phpunit
